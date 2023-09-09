@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            background: url(https://img.freepik.com/free-vector/gradient-technology-geometric-background_23-2149118851.jpg?t=st=1694184877~exp=1694185477~hmac=6e4d349a54fa6f0e1cfe693ae1f61137edbfa038b8fa6a9aadc197cee3b7e0b2);
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 46px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 71px white;
+            background-image: url(https://img.freepik.com/free-vector/gradient-geometric-shapes-dark-background_23-2148438552.jpg?t=st=1694184877~exp=1694185477~hmac=22a037312017d5ec54dc18246bf4447193c2c31bca3d10762999927eb7ce5ad9);
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        #name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Gaming Page !</h1>
+        <p></p>
+        <div id="name">
+            <!-- JavaScript will insert the name here -->
+        </div>
+        <div class="button-container">
+            <!-- Create 10 buttons dynamically -->
+            <a href="game.html">
+            <button>TicTacToe</button></a>
+            <a href="snake.html">
+            <button>Snake Game</button></a>
+            <button>Button 3</button>
+            <button>Button 4</button>
+            <button>Button 5</button>
+            <button>Button 6</button>
+            <button>Button 7</button>
+            <button>Button 8</button>
+            <button>Button 9</button>
+            <button>Button 10</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to get the name from the previous page's URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        if (name) {
+            document.getElementById('name').textContent = name;
+        }
+    </script>
+</body>
+</html>
